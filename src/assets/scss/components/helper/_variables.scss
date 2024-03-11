@@ -1,0 +1,103 @@
+:root {
+  --color-white: #fff;
+  --color-dark: #242731;
+}
+
+// media queries
+@mixin w {
+  @media only screen and (max-width: "1419px") {
+    @content;
+  }
+}
+@mixin x {
+  @media only screen and (max-width: "1339px") {
+    @content;
+  }
+}
+@mixin d {
+  @media only screen and (max-width: "1179px") {
+    @content;
+  }
+}
+@mixin t {
+  @media only screen and (max-width: "1023px") {
+    @content;
+  }
+}
+@mixin m {
+  @media only screen and (max-width: "767px") {
+    @content;
+  }
+}
+@mixin a {
+  @media only screen and (max-width: "639px") {
+    @content;
+  }
+}
+@mixin s {
+  @media only screen and (max-width: "474px") {
+    @content;
+  }
+}
+
+// fonts
+@mixin fi {
+  font-family: Helvetica, Arial, sans-serif;
+}
+@mixin fp {
+  font-family: 'Inter', sans-serif;
+}
+
+$bl: #1b1d21;
+$black: #11142D;
+$wh: #ffffff;
+$white: #ffffff;
+$purple: #6c5dd3;
+$purple-light: #cfc8ff;
+$text: #11142d;
+$gray-dark: #808191;
+$gray: #808191;
+$gray-light: #b2b3bd;
+$orange: #ec8000;
+$red: #ff754c;
+$pink: #ffa2c0;
+$pink-light: #ffebf6;
+$yellow: #ffce73;
+$yellow-light: #ffe2ac;
+$blue: #3f8cff;
+$blue-light: #a0d7e7;
+$blue-dark: #0049c6;
+$border: #e4e4e4;
+$green: #7fba7a;
+$link: #5f75ee;
+
+
+
+// dark theme
+$dark: #242731;
+$dark1: #1f2128;
+$border-dark: rgba($border, 0.1);
+$dark-bg: #1F2128;
+$dark-border: rgba($gray-light, .1);
+$dark-active: #191B20;
+$dark-color: #242731;
+
+@mixin shadow {
+  background: #e3e6ec;
+  opacity: 0.91;
+  filter: blur(86.985px);
+  border-radius: 24px;
+  @include m {
+    filter: blur(46.985px);
+  }
+}
+
+@mixin shadow-dark {
+  background: #000;
+  opacity: 0.51;
+  filter: blur(86.985px);
+  border-radius: 24px;
+  @include m {
+    filter: blur(46.985px);
+  }
+}
