@@ -1,0 +1,134 @@
+.cur-view-container {
+  .cur-view-path {
+    background: transparent;
+    padding: 44px 64px 44px;
+    max-height: initial;
+
+    @include m {
+      padding: 16px 16px 28px;
+    }
+
+    .sf-heading {
+      font-size: 24px;
+      line-height: 1.33333;
+    }
+
+    &:after {
+      border-bottom: 0;
+    }
+  }
+
+  .cur-view-content {
+    padding: 0 64px 44px;
+
+    @include m {
+      padding: 0 16px 32px;
+    }
+    .table-container {
+      padding: 0;
+    }
+
+    table {
+      display: block;
+      position: relative;
+      border-radius: 24px;
+      background: $white;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 43px;
+        left: 32px;
+        right: 32px;
+        bottom: -43px;
+        z-index: -1;
+      }
+
+      thead {
+        tr {
+          th {
+            padding-top: 24px;
+            padding-bottom: 24px;
+            font-size: 13px;
+            line-height: 1.38462;
+            font-weight: 500;
+            color: #b2b3bd;
+            border-bottom: 1px solid #e4e4e4;
+          }
+        }
+      }
+      tbody {
+        tr {
+          border-radius: 12px;
+          &.tr-highlight {
+            background: rgba(228, 228, 228, 0.2);
+            border-radius: 12px;
+          }
+
+          td {
+            display: table-cell;
+            vertical-align: middle;
+            padding-left: 20px;
+            padding-top: 32px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #e4e4e4;
+
+            .sf2-icon-share {
+              &::before {
+                font-size: 16px;
+                content: "\e05b";
+                @include iconFont;
+                margin-right: 10px;
+              }
+            }
+
+            .sf2-icon-delete {
+              &::before {
+                font-size: 16px;
+                content: "\e054";
+                @include iconFont;
+                margin-right: 10px;
+              }
+            }
+
+            .dropdown {
+              .sf2-icon-caret-down,
+              .sf2-icon-caret-up,
+              .sf-dropdown-toggle {
+                &::before {
+                  font-size: 16px;
+                  content: "\e603";
+                  @include iconFont;
+                  margin-right: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.cur-view-detail {
+  box-shadow: 0 0 0 0;
+
+  .detail-header {
+    background-color: transparent;
+    border-bottom: 0;
+    flex-direction: row-reverse;
+
+    .detail-title {
+      justify-content: normal;
+      margin-left: 15px;
+
+      &.dirent-title {
+      }
+    }
+
+    .detail-control {
+      padding-right: 15px;
+    }
+  }
+}
+
