@@ -1,0 +1,193 @@
+.dropdown-menu {
+  &.show {
+    padding: 20px;
+    border-radius: 20px;
+    background: #ffffff;
+    -webkit-box-shadow: 0px 24px 64px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 24px 64px rgba(0, 0, 0, 0.5);
+    top: 10px !important;
+
+    .link-dropdown-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      height: 56px;
+      border-radius: 12px;
+      font-weight: 600;
+      -webkit-transition: all 0.25s;
+      -o-transition: all 0.25s;
+      transition: all 0.25s;
+
+      .link-dropdown-item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 56px;
+        border-radius: 12px;
+        font-weight: 600;
+        -webkit-transition: all 0.25s;
+        -o-transition: all 0.25s;
+        transition: all 0.25s;
+
+        &:hover {
+          background: rgba(228, 228, 228, 0.3);
+          color: $orange;
+        }
+      }
+
+      &:hover {
+        background: rgba(228, 228, 228, 0.3);
+        color: $orange;
+      }
+    }
+
+    .dropdown-item {
+      border-radius: 15px !important;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      height: 56px;
+      border-radius: 12px;
+      font-weight: 600;
+      -webkit-transition: all 0.25s;
+      -o-transition: all 0.25s;
+      transition: all 0.25s;
+
+      &:hover {
+        background: rgba(228, 228, 228, 0.3);
+        color: $orange;
+      }
+    }
+  }
+}
+
+.notification-wrapper {
+  .notification-container {
+    padding: 20px;
+    border-radius: 20px;
+    background: #ffffff;
+    -webkit-box-shadow: 0px 24px 64px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 24px 64px rgba(0, 0, 0, 0.5);
+    top: 10px !important;
+    .notification-header {
+      font-size: 18px;
+      line-height: 1.33333;
+      font-weight: 600;
+      align-items: normal;
+      justify-content: left;
+      border-bottom: 0;
+    }
+    .notification-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #1b1d21;
+      color: #ffffff;
+      min-width: 166px;
+      height: 56px;
+      padding: 0 20px;
+      border-radius: 16px / 16px;
+      font-family: "Inter", sans-serif;
+      font-size: 14px;
+      line-height: 1.42857;
+      font-weight: 700;
+      -webkit-transition: all 0.25s;
+      -o-transition: all 0.25s;
+      transition: all 0.25s;
+    }
+  }
+}
+
+#user-info-popup {
+  &.account-popup {
+    top: 57px;
+
+    &.sf-popover {
+      border-radius: 20px;
+      border: 0;
+      box-shadow: 0 0 0;
+      background: transparent;
+    }
+
+    .outer-caret {
+      top: -9px;
+      right: 19px;
+    }
+  }
+
+  .sf-popover-con {
+    padding: 20px;
+    border-radius: 20px;
+    background: #ffffff;
+    -webkit-box-shadow: 0px 24px 64px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 24px 64px rgba(0, 0, 0, 0.5);
+    top: 10px !important;
+
+    #space-traffic {
+      margin-bottom: 10px;
+    }
+
+    .item {
+      &.o-hidden {
+        border-bottom: 0;
+      }
+    }
+
+    a.item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      height: 56px;
+      border-radius: 12px;
+      font-weight: 600;
+      -webkit-transition: all 0.25s;
+      -o-transition: all 0.25s;
+      transition: all 0.25s;
+      border-bottom: 0;
+
+      &:hover {
+        background: rgba(228, 228, 228, 0.3);
+        color: $orange;
+      }
+
+      &[href="/profile/"] {
+        &::before {
+          font-size: 16px;
+          content: "\e005";
+          @include iconFont;
+          margin-right: 10px;
+        }
+      }
+
+      &[href="/sys/info/"] {
+        &::before {
+          font-size: 16px;
+          content: "\e052";
+          @include iconFont;
+          margin-right: 10px;
+        }
+      }
+
+      &[href="/accounts/logout/"] {
+        &::before {
+          font-size: 16px;
+          content: "\e065";
+          @include iconFont;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
