@@ -1,0 +1,191 @@
+body {
+  min-width: 375px;
+  @include fp;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $text;
+  &.dark {
+    background: $dark;
+    color: $wh;
+  }
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+button,
+input,
+textarea,
+select {
+  @include fp;
+}
+
+@include dark {
+  .apexcharts-tooltip.apexcharts-theme-light {
+    color: $text;
+  }
+
+  .apexcharts-gridlines-horizontal line {
+    stroke: $border-dark;
+  }
+}
+
+.grid-view {
+  padding: 0;
+}
+
+.uploader-list-view {
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 24px 64px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 24px 64px rgba(0, 0, 0, 0.5);
+
+  .uploader-list-header {
+    background-color: transparent;
+
+    &::before {
+      font-size: 16px;
+      content: "\e084";
+      @include iconFont;
+      margin-right: 10px;
+    }
+  }
+}
+
+#wrapper {
+  .top-header,
+  #header {
+    background: transparent;
+    border-bottom: 1px solid #e4e4e4;
+    flex-shrink: 0;
+    padding: 0.5rem 1rem;
+    height: 96px;
+
+    a img[alt="logo"] {
+      height: 50px;
+      margin-top: 10px;
+    }
+
+    #notifications {
+      a {
+        .sf2-icon-bell {
+          font-size: 22px;
+          fill: $gray-dark;
+          @include iconFont;
+
+          &:before {
+            content: "\e027";
+          }
+        }
+      }
+    }
+
+    .avatar {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+}
+
+.web-setting-icon-btn-submit {
+  font-size: 0;
+
+  &:before {
+    @include iconFont;
+    font-size: 16px;
+    content: "\e080";
+  }
+}
+
+.web-setting-icon-btn-cancel {
+  font-size: 0;
+
+  &:before {
+    @include iconFont;
+    font-size: 16px;
+    content: "\e082";
+  }
+}
+
+.sf2-icon-info {
+  font-size: 0;
+
+  &:before {
+    @include iconFont;
+    font-size: 22px;
+    content: "\e617";
+  }
+}
+
+.sf2-icon-histogram {
+  font-size: 0;
+
+  &:before {
+    @include iconFont;
+    font-size: 22px;
+    content: "\e077";
+  }
+}
+
+.sf2-icon-cog2 {
+  font-size: 0;
+
+  &:before {
+    @include iconFont;
+    font-size: 22px;
+    content: "\e052";
+  }
+}
+
+.sf2-icon-library {
+  font-size: 0;
+
+  &:before {
+    @include iconFont;
+    font-size: 22px;
+    content: "\e013";
+  }
+}
+
+.sf2-icon-msgs {
+  font-size: 0;
+
+  &:before {
+    @include iconFont;
+    font-size: 22px;
+    content: "\e027";
+  }
+}
+
+.sf2-icon-link {
+  font-size: 0;
+
+  &:before {
+    @include iconFont;
+    font-size: 22px;
+    content: "\e08d";
+  }
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: $orange transparent;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $orange;
+  border-radius: 10px;
+  border: 3px solid transparent;
+}
