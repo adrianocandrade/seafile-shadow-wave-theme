@@ -6,7 +6,7 @@
 
 ### Support me by treating me to a cup of coffee 🥰
 
-[![Buy me a coffee](https://raw.githubusercontent.com/adrianocandrade/seafile-shadow-wave-theme/main/src/assets/images/buy_my_coffeeV1.png)](https://www.paypal.com/donate/?hosted_button_id=RDFH2HA3DUCPU)
+[![Buy me a coffee](https://raw.githubusercontent.com/adrianocandrade/seafile-shadow-wave-theme/main/src/assets/images/buy_my_coffee_v2.png)](https://www.paypal.com/donate/?hosted_button_id=RDFH2HA3DUCPU)
 
 ---
 
