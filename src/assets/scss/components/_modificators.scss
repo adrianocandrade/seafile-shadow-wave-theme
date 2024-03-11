@@ -1,0 +1,205 @@
+.color {
+    &-green {
+        color: $green; }
+    &-red {
+        color: $red; }
+    &-white {
+        color: $wh; }
+    &-blue {
+        color: $blue; }
+    &-blue-dark {
+        color: $link; }
+    // &-yellow
+       //  color: $yellow
+    &-purple {
+        color: $purple; }
+    &-gray {
+        color: $gray-dark; }
+    // &-turquoise
+}		//  color: $turquoise
+
+.bg {
+   &-blue {
+       background: $blue;
+       &-opacity {
+           background: rgba($blue, .3); } }
+   &-blue-light {
+       background: $blue-light;
+       &-opacity {
+           background: rgba($blue-light, .3); } }
+   &-yellow {
+       background: $yellow;
+       &-opacity {
+           background: rgba($yellow, .3); } }
+   &-yellow-light {
+       background: $yellow-light; }
+   &-pink {
+       background: $pink;
+       &-opacity {
+           background: rgba($pink, .3); } }
+   &-pink-light {
+       background: $pink-light; }
+   &-green {
+       background: $green;
+       &-opacity {
+           background: rgba($green, .3); } }
+   &-purple {
+       background: $purple;
+       &-opacity {
+           background: rgba($purple, .3); } }
+   &-purple-light {
+       background: $purple-light; }
+   &-red {
+       background: $red;
+       &-opacity {
+           background: rgba($red, .3); } } }
+
+.text {
+   &-right {
+       text-align: right; }
+   &-center {
+       text-align: center; }
+   &-uppercase {
+       text-transform: uppercase; } }
+
+.m-auto {
+   margin: auto; }
+.ml-auto {
+   margin-left: auto; }
+.mr-auto {
+   margin-right: auto; }
+
+.align {
+   &-baseline {
+       align-items: baseline; } }
+
+.desktop {
+   &-hide {
+       @include d {
+           display: none; } }
+   &-show {
+       display: none;
+       @include d {
+           display: block; } }
+   &-text-right {
+       @include d {
+           text-align: right; } } }
+
+.tablet {
+   &-hide {
+       @include t {
+           display: none; } }
+   &-show {
+       display: none;
+       @include t {
+           display: block; } }
+   &-text-right {
+       @include t {
+           text-align: right; } } }
+
+.mobile {
+   &-hide {
+       @include m {
+           display: none; } }
+   &-show {
+       display: none;
+       @include m {
+           display: block; } }
+   &-text-right {
+       @include m {
+           text-align: right; } } }
+
+.title {
+   font-size: 16px;
+   line-height: calc(19/16);
+   font-weight: 600;
+   &_lg,
+   &_md,
+   &_sm {
+       @include fp;
+       font-weight: 600;
+       letter-spacing: -1px; }
+   &_lg {
+       font-size: 96px;
+       line-height: calc(120/96); }
+   &_md {
+       font-size: 72px;
+       line-height: calc(88/72); }
+   &_sm {
+       font-size: 64px;
+       line-height: calc(72/64); } }
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+   @include fp; }
+
+.h1,
+.h2,
+.h3 {
+   font-weight: 600;
+   letter-spacing: -1px; }
+
+.h4,
+.h5,
+.h6 {
+   font-weight: 500; }
+
+.h1 {
+   font-size: 56px;
+   line-height: calc(64/56);
+   @include x {
+       font-size: 48px;
+       line-height: calc(72/48); }
+   @include m {
+       font-size: 40px;
+       line-height: calc(60/40); } }
+
+.h2 {
+   font-size: 48px;
+   line-height: calc(72/48);
+   @include x {
+       font-size: 40px;
+       line-height: calc(60/40); }
+   @include m {
+       font-size: 32px;
+       line-height: calc(48/32);
+       letter-spacing: -.5px; } }
+
+.h3 {
+   font-size: 40px;
+   line-height: calc(60/40);
+   @include t {
+       font-size: 32px;
+       line-height: calc(48/32);
+       letter-spacing: -.5px; } }
+
+.h4 {
+   font-size: 32px;
+   line-height: calc(48/32);
+   letter-spacing: -.5px; }
+
+.h5 {
+   font-size: 24px;
+   line-height: calc(32/24); }
+
+.h6 {
+   font-size: 18px;
+   line-height: calc(24/18); }
+
+.caption {
+   font-size: 13px;
+   font-weight: 600;
+   line-height: calc(18/13); }
+
+.caption-sm {
+   font-size: 12px;
+   font-weight: 500;
+   line-height: calc(16/12); }
+
+
+
+
