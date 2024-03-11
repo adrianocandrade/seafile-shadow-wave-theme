@@ -1,0 +1,252 @@
+.side-panel {
+  flex-shrink: 0;
+  max-width: 300px;
+  background: $wh;
+  border-right: 1px solid $border;
+
+  @include t {
+    width: 96px;
+    flex: 0 0 96px;
+  }
+  @include m {
+    max-width: initial;
+    width: 80%;
+    flex: 0 0 100%;
+    left: -80%;
+  }
+
+  .side-panel-north {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    background: transparent;
+    border-bottom: 0;
+
+    .top-logo {
+      padding: 0 20px;
+
+      img {
+        height: 50px;
+      }
+    }
+  }
+
+  .side-panel-center {
+    max-height: 100%;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+
+    .side-nav {
+      .side-nav-con {
+        padding: 0 20px 30px;
+
+        ul:nth-of-type(1):not(.sub-nav)::after {
+          display: block;
+          content: "";
+          height: 1px;
+          background: #f0f3f6;
+          margin-bottom: 20px;
+          margin-top: 20px;
+        }
+
+        .sub-nav {
+          -webkit-transition: all 0.25s ease-in-out;
+          -o-transition: all 0.25s ease-in-out;
+          transition: all 0.25s ease-in-out;
+
+          &.side-panel-slide {
+            min-height: 60px;
+            height: 100% !important;
+          }
+        }
+      }
+      .sf-heading {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.33333;
+        color: #808191;
+        margin-bottom: 16px;
+        padding: 0 20px;
+        text-align: left;
+      }
+      .nav-item {
+        margin-bottom: 10px;
+
+        .nav-link {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          height: 56px;
+          padding: 0 20px;
+          border-radius: 12px;
+          background: transparent;
+          font-size: 14px;
+          font-weight: 600;
+          color: #808191;
+          -webkit-transition: color 0.25s;
+          -o-transition: color 0.25s;
+          transition: color 0.25s;
+          -webkit-transition: all 0.25s;
+          -o-transition: all 0.25s;
+          transition: all 0.25s;
+
+          span {
+            &.nav-text {
+              margin-right: auto;
+            }
+
+            &:not(.nav-text):not(.toggle-icon) {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-pack: center;
+              -ms-flex-pack: center;
+              justify-content: center;
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+              align-items: center;
+              -ms-flex-negative: 0;
+              flex-shrink: 0;
+              width: 24px;
+              height: 24px;
+              margin-right: 16px;
+              font-size: 21px;
+
+              @include iconFont;
+
+              /* Better Font Rendering =========== */
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+
+              &.sf2-icon-user {
+                &::before {
+                  content: "\e005";
+                }
+              }
+
+              &.sf2-icon-share {
+                &::before {
+                  content: "\e05b";
+                }
+              }
+
+              &.sf2-icon-organization {
+                &::before {
+                  content: "\e616";
+                }
+              }
+
+              &.sf2-icon-group {
+                &::before {
+                  content: "\e001";
+                }
+              }
+
+              &.sf2-icon-star {
+                &::before {
+                  content: "\e09b";
+                }
+              }
+
+              &.sf2-icon-clock {
+                &::before {
+                  content: "\e081";
+                }
+              }
+
+              &.sf2-icon-wiki-view {
+                &::before {
+                  content: "\e013";
+                }
+              }
+
+              &.sf2-icon-monitor {
+                &::before {
+                  content: "\e011";
+                }
+              }
+
+              &.sf2-icon-wrench {
+                &::before {
+                  content: "\e052";
+                }
+              }
+
+              &.sharp {
+                font-size: 0;
+                &::before {
+                  font-size: 21px;
+                  content: "\e079";
+                }
+              }
+            }
+
+            &.toggle-icon {
+              font-size: 12px;
+              @include iconFont;
+
+              &.fa-caret-left:before {
+                content: "\e606";
+              }
+              &.fa-caret-down:before {
+                content: "\e604";
+              }
+            }
+          }
+
+          &:not(.active):hover {
+            color: #ec8000 !important;
+
+            span:not(.nav-text),
+            [class^="sf2-icon-"] {
+              color: #ec8000 !important;
+            }
+          }
+
+          &.active {
+            background: #ec8000;
+            color: #ffffff;
+          }
+
+          &:has(+ .side-panel-slide) {
+            border-radius: 12px 12px 0 0;
+            background: #ec800024 !important;
+          }
+        }
+
+        .sub-nav {
+          padding: 0 18px;
+          background: rgba(228, 228, 228, 0.3);
+          transition: all 0.2s ease-in-out;
+          border-radius: 0 0 12px 12px;
+          padding-top: 0;
+          padding-bottom: 0;
+
+          &.side-panel-slide {
+            padding-top: 20px;
+            padding-bottom: 20px;
+          }
+
+          .nav-item {
+            .nav-link {
+              height: 35px;
+              padding-left: 0;
+              padding-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .side-panel-footer {
+    .side-nav-footer {
+      background: transparent;
+      border-bottom: 0;
+    }
+  }
+}
