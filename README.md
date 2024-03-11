@@ -8,16 +8,18 @@
 
 - After reloading the page, your Seafile should've gotten a visual upgrade 🥰
 
----
+
 ### 💎 URL Themes
 
     - White URL
-    https://github.com/adrianocandrade/seafile-shadow-wave-theme/blob/92aa063a6006611f3db6ab7d83dfb6c37ebd80e4/dist/assets/css/custom.css
-
-    -Dark URL
-    https://github.com/adrianocandrade/seafile-shadow-wave-theme/blob/92aa063a6006611f3db6ab7d83dfb6c37ebd80e4/dist/assets/css/customDark.css
-
 ---
+    https://github.com/adrianocandrade/seafile-shadow-wave-theme/blob/92aa063a6006611f3db6ab7d83dfb6c37ebd80e4/dist/assets/css/custom.css
+---
+    -Dark URL
+---
+    https://github.com/adrianocandrade/seafile-shadow-wave-theme/blob/92aa063a6006611f3db6ab7d83dfb6c37ebd80e4/dist/assets/css/customDark.css
+---
+
 
 ## Requirements
 
