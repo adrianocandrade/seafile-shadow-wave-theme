@@ -9,13 +9,13 @@
 - After reloading the page, your Seafile should've gotten a visual upgrade 🥰
 
 
-### 💎 URL Themes
+## 💎 URL Themes
 
-    - White URL
+- White URL
 ```sh
     https://github.com/adrianocandrade/seafile-shadow-wave-theme/blob/92aa063a6006611f3db6ab7d83dfb6c37ebd80e4/dist/assets/css/custom.css
 ```
-    - Dark URL
+- Dark URL
 ```sh
     https://github.com/adrianocandrade/seafile-shadow-wave-theme/blob/92aa063a6006611f3db6ab7d83dfb6c37ebd80e4/dist/assets/css/customDark.css
 ```
