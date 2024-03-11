@@ -1,0 +1,254 @@
+.main-panel-north {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 96px;
+  padding: 0 64px;
+  background: #ffffff;
+  -webkit-box-shadow: inset 0 -1px 0 0 #e4e4e4;
+  box-shadow: inset 0 -1px 0 0 #e4e4e4;
+  -webkit-transition: left 0.25s;
+  -o-transition: left 0.25s;
+  transition: left 0.25s;
+
+  @include m {
+    padding: 0 16px;
+  }
+
+  .cur-view-toolbar {
+    justify-content: space-between;
+    padding-right: 64px;
+
+    .dir-operation {
+      display: flex;
+      gap: 5px;
+
+      .group-operations {
+        gap: 5px;
+      }
+      .btn {
+        font-size: 0;
+        height: 48px;
+        padding: 0 24px;
+        border-radius: 12px;
+        transition: all 0.2s;
+        margin-left: 0;
+
+        @include iconFont;
+        &[aria-controls="upload-menu"] {
+          font-size: 0;
+
+          &:before {
+            font-size: 16px;
+            content: "\e084";
+          }
+        }
+        &[aria-controls="new-menu"] {
+          font-size: 0;
+
+          &:before {
+            font-size: 16px;
+            content: "\e095";
+          }
+        }
+        &.sf2-icon-move {
+          font-size: 0;
+
+          &:before {
+            font-size: 16px;
+            content: "\e051";
+          }
+        }
+        &.sf2-icon-copy {
+          font-size: 0;
+
+          &:before {
+            font-size: 16px;
+            content: "\e040";
+          }
+        }
+        &.sf2-icon-delete {
+          font-size: 0;
+
+          &:before {
+            font-size: 16px;
+            content: "\e054";
+          }
+        }
+        &.sf2-icon-download {
+          font-size: 0;
+
+          &:before {
+            font-size: 16px;
+            content: "\e083";
+          }
+        }
+
+        &.sf-dropdown-toggle {
+          font-size: 0;
+
+          &:before {
+            font-size: 16px;
+            content: "\e602";
+          }
+
+          &.dirents-more-menu {
+            width: initial;
+            border-bottom-right-radius: 12px !important;
+            border-top-right-radius: 12px !important;
+          }
+        }
+
+        &:before {
+          font-size: 16px;
+          content: "\e05a";
+        }
+      }
+    }
+
+    .view-mode.btn-group {
+      .btn {
+        font-size: 0;
+        @include iconFont;
+
+        &#list {
+          font-size: 0;
+
+          &:before {
+            font-size: 16px;
+            content: "\e601";
+          }
+        }
+        &#grid {
+          font-size: 0;
+
+          &:before {
+            font-size: 16px;
+            content: "\e06a";
+          }
+        }
+
+        &#column {
+          font-size: 0;
+
+          &:before {
+            font-size: 16px;
+            content: "\e067";
+          }
+        }
+      }
+    }
+
+    .detail-btn.btn-group {
+      .btn {
+        font-size: 0;
+        @include iconFont;
+
+        &#detail {
+          padding: 0 24px;
+          width: initial;
+          height: 48px;
+          min-width: initial;
+          font-size: 0;
+          line-height: 1.84615;
+          border-radius: 12px;
+
+          &:before {
+            font-size: 16px;
+            content: "\e08b";
+          }
+        }
+      }
+    }
+  }
+
+  .operation {
+    .btn {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      gap: 5px;
+      height: 56px;
+      padding: 0 20px;
+      border: 0;
+      border-radius: 16px;
+      background: rgba($border, 0.25);
+      font-weight: 600;
+      color: $gray-dark;
+      transition: all 0.25s;
+      @include m {
+        flex: 0 0 calc(50% - 8px);
+        width: calc(50% - 8px);
+        justify-content: center;
+        margin: 0 4px;
+      }
+      .fas {
+        margin-right: 12px;
+        font-size: 16px;
+        fill: $gray-dark;
+        @include iconFont;
+
+        &.fa-plus-square {
+          &:before {
+            content: "\e095";
+          }
+        }
+      }
+      &:hover {
+        background: $orange;
+        color: $wh;
+        .fas {
+          color: $wh;
+          fill: $wh;
+
+          &:before {
+            color: $wh;
+            fill: $wh;
+          }
+        }
+      }
+    }
+  }
+
+  .common-toolbar {
+    gap: 15px;
+
+    .fas.fa-search {
+      font-size: 22px;
+      fill: $gray-dark;
+      @include iconFont;
+
+      &:before {
+        content: "\e090";
+      }
+    }
+  }
+
+  #notifications {
+    a {
+      .sf2-icon-bell {
+        font-size: 22px;
+        fill: $gray-dark;
+        @include iconFont;
+
+        &:before {
+          content: "\e027";
+        }
+      }
+    }
+  }
+
+  .avatar {
+    width: 3rem;
+    height: 3rem;
+  }
+}
