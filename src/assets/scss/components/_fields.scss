@@ -1,0 +1,139 @@
+.form-group {
+  label {
+    margin-bottom: 16px;
+    font-size: 12px;
+    line-height: calc(16 / 12);
+    font-weight: 500;
+    color: $gray-light;
+  }
+  .form-control {
+    width: 100%;
+    border-radius: 8px;
+    background: rgba($border, 0.3);
+    border: 2px solid transparent;
+    @include fp;
+    font-size: 14px;
+    font-weight: 600;
+    color: $text;
+    transition: all 0.25s;
+    &:focus {
+      border-color: $orange;
+      background: $wh;
+      box-shadow: 0 0 0 0;
+    }
+  }
+  input {
+    height: 56px;
+    padding: 0 23px;
+  }
+  textarea {
+    height: 157px;
+    padding: 15px 23px;
+    resize: none;
+  }
+}
+
+.d-flex {
+  .form-control {
+    width: 100%;
+    border-radius: 8px;
+    background: rgba($border, 0.3);
+    border: 2px solid transparent;
+    @include fp;
+    font-size: 14px;
+    font-weight: 600;
+    color: $text;
+    transition: all 0.25s;
+    height: 48px;
+    &:focus {
+      border-color: $orange;
+      background: $wh;
+      box-shadow: 0 0 0 0;
+    }
+  }
+}
+
+.form-control {
+  border-radius: 8px;
+  background: rgba($border, 0.3);
+  border: 2px solid transparent;
+  @include fp;
+  font-size: 14px;
+  font-weight: 600;
+  color: $text;
+  transition: all 0.25s;
+  height: 48px;
+  &:focus {
+    border-color: $orange;
+    background: $wh;
+    box-shadow: 0 0 0 0;
+  }
+}
+
+.new-narrow-panel {
+  .input {
+    width: 100%;
+    border-radius: 8px;
+    background: rgba($border, 0.3);
+    border: 2px solid transparent;
+    @include fp;
+    font-size: 14px;
+    font-weight: 600;
+    color: $text;
+    transition: all 0.25s;
+    height: 48px;
+    &:focus {
+      border-color: $orange;
+      background: $wh;
+      box-shadow: 0 0 0 0;
+    }
+  }
+}
+
+#log-in-panel {
+  .input {
+    width: 92%;
+    border-radius: 8px;
+    background: rgba($border, 0.3);
+    border: 2px solid transparent;
+    @include fp;
+    font-size: 14px;
+    font-weight: 600;
+    color: $text;
+    transition: all 0.25s;
+    height: 48px;
+    &:focus {
+      border-color: $orange;
+      background: $wh;
+      box-shadow: 0 0 0 0;
+    }
+  }
+
+  .remember-me {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .submit {
+    height: 42px !important;
+  }
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: $white;
+  opacity: 1;
+  height: 40px;
+  color: $bl;
+  border-radius: 8px;
+}
+
+@include dark {
+  .form-group {
+    .form-control {
+      color: $wh;
+      background: rgba($border-dark, 0.04);
+    }
+  }
+}
