@@ -1,0 +1,53 @@
+{
+  "name": "seafile-shadow-wave-theme",
+  "version": "1.0.0",
+  "description": "Seafile “Shadow Wave” Theme: An elegant combination of light and shadow for your Seafile! This custom theme offers a pleasant visual experience whether you are a day or night user.",
+  "scripts": {
+    "dev": "webpack serve --config webpack.config.dev.js",
+    "build": "webpack --config webpack.config.prod.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adrianocandrade/seafile-shadow-wave-theme.git"
+  },
+  "keywords": [
+    "Webpack 5",
+    "webpack",
+    "Handlebars",
+    "html",
+    "scss",
+    "js"
+  ],
+  "author": {
+    "name": "Adriano Andrade",
+    "email": "contato@adrianoc.com.br",
+    "url": "https://www.adrianoc.com.br"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adrianocandrade/seafile-shadow-wave-theme/issues"
+  },
+  "homepage": "https://adrianocandrade.github.io/seafile-shadow-wave-theme",
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "fast-glob": "^3.3.1",
+    "file-loader": "^6.2.0",
+    "handlebars": "^4.7.8",
+    "handlebars-loader": "^1.7.3",
+    "handlebars-webpack-plugin": "^2.2.1",
+    "mini-css-extract-plugin": "^2.7.6",
+    "node-sass": "^9.0.0",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
+    "sass": "^1.67.0",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "terser-webpack-plugin": "^5.3.9",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "gh-pages": "^6.0.0"
+  }
+}
