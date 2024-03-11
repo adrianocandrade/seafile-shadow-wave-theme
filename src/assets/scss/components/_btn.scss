@@ -1,0 +1,102 @@
+.btn {
+  height: 48px;
+  padding: 0 15px;
+  border-radius: 12px;
+  @include fp;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+  img,
+  &__text,
+  .icon {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  img,
+  .icon {
+    margin-right: 8px;
+  }
+  .icon {
+    font-size: 16px;
+  }
+  &_white {
+    background: $white;
+    color: $black;
+    &:hover {
+      background: $gray-light;
+    }
+  }
+  &_blue {
+    background: $blue;
+    color: $white;
+    &:hover {
+      background: darken($blue, 7);
+    }
+  }
+  &_border {
+    border: 1px solid $gray-light;
+    &:hover {
+      border-color: $black;
+    }
+  }
+  &_gray {
+    background: $gray-light;
+    color: $gray;
+    &:hover {
+      background: $gray;
+      color: $white;
+    }
+  }
+  &_transparent {
+    background: transparent;
+    &:hover {
+      color: $blue;
+    }
+  }
+  &_sm {
+    height: 40px;
+  }
+  &_big {
+    height: 64px;
+  }
+  &_wide {
+    min-width: 100%;
+  }
+  &[href] {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@include dark {
+  .btn {
+    &_white {
+      background: $dark-color;
+      color: $white;
+      &:hover {
+        background: $dark;
+      }
+    }
+    &_border {
+      border-color: $dark-border;
+      color: $white;
+      .icon {
+        fill: $white;
+      }
+      &:hover {
+        border-color: transparent;
+        background: $dark-border;
+      }
+    }
+    &_gray {
+      background: $dark-border;
+    }
+    &_transparent {
+      color: $white;
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+}
