@@ -1,0 +1,14 @@
+.modal {
+  .modal-content {
+    padding: 20px;
+    border-radius: 24px;
+
+    .modal-header {
+      border-bottom: 0;
+    }
+
+    .modal-footer {
+        border-top: 0;
+    }
+  }
+}
