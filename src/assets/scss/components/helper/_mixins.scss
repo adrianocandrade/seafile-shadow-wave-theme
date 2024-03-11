@@ -1,0 +1,376 @@
+// selectors
+@mixin nl {
+  &:not(:last-child) {
+    @content;
+  }
+}
+@mixin nf {
+  &:not(:first-child) {
+    @content;
+  }
+}
+
+// width
+@mixin r($width) {
+  @media only screen and (max-width: $width + "px") {
+    @content;
+  }
+}
+
+@mixin rmin($width) {
+  @media only screen and (min-width: $width + "px") {
+    @content;
+  }
+}
+
+// height
+@mixin rh($height) {
+  @media only screen and (max-height: $height + "px") {
+    @content;
+  }
+}
+
+@mixin rhmin($height) {
+  @media only screen and (min-height: $height + "px") {
+    @content;
+  }
+}
+
+@mixin fs($sizeValue: 16) {
+  font-size: $sizeValue + px;
+  font-size: $sizeValue / 10 + rem;
+}
+
+@mixin text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+%pseudo {
+  position: relative;
+  &:before,
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+@mixin pseudo {
+  @extend %pseudo;
+}
+
+@mixin coverdiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+@mixin bg-size($width: 100%, $height: 100%) {
+  background-size: $width $height;
+}
+
+// retina, also available as +hdpi
+@mixin retina {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-device-pixel-ratio: 2) {
+    @content;
+  }
+}
+
+@mixin box {
+  @include box-sizing(border-box);
+}
+// vertical-align at center
+@mixin vcenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//simple gradient
+@mixin g($color1, $color2) {
+  background-image: linear-gradient($color1, $color2);
+}
+
+@mixin gh($color1, $color2) {
+  background-image: linear-gradient(left, $color1, $color2);
+}
+
+// font-family
+@mixin font($alias, $name) {
+  @font-face {
+    font-family: $alias;
+    src: url("fonts/" + $name + ".woff2") format("woff2"),
+      url("fonts/" + $name + ".woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+// to use:
+//+font(black, cytiapro-black-webfont)
+
+// ROTATE
+@mixin rotate($deg: 0, $m11: 0, $m12: 0, $m21: 0, $m22: 0) {
+  transform: rotate($deg + deg);
+  filter: progid:DXImageTransform.Microsoft.Matrix(M11=$m11, M12=$m12,M21=$m21, M22=$m22, sizingMethod='auto expand');
+  zoom: 1;
+}
+
+// TRANSITION
+
+@mixin tr($what) {
+  transition: $what;
+}
+
+@mixin hide-text {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+
+@mixin hidetext {
+  @include hide-text;
+}
+
+@mixin justify {
+  text-align: justify;
+  line-height: 0;
+  font-size: 0;
+  text-justify: newspaper;
+  zoom: 1;
+  text-align-last: justify;
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+  }
+}
+@mixin vertical {
+  text-align: center;
+  font-size: 0;
+  &:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+  }
+}
+
+@mixin clr {
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+  *zoom: 1;
+}
+
+@mixin placeholder-color($color) {
+  &::placeholder {
+    color: $color;
+  }
+}
+
+@mixin placeholder {
+  &::placeholder {
+    @content;
+  }
+}
+
+@mixin gray {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+  // Firefox 10+
+  filter: gray;
+  // IE6-9
+  -webkit-filter: grayscale(100%);
+  // Chrome 19+ & Safari 6+
+  filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(grayScale=1)";
+}
+
+@mixin gray-half {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0.5'/></filter></svg>#grayscale");
+  // Firefox 10+
+  filter: gray alpha(opacity = 50);
+  // IE6-9
+  -webkit-filter: grayscale(50%);
+} // Chrome 19+ & Safari 6+
+
+@mixin gray-zero {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0'/></filter></svg>#grayscale");
+  -webkit-filter: grayscale(0%);
+}
+
+@mixin unselectable {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+@mixin nosel {
+  @include unselectable;
+}
+
+@mixin prevent-text {
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+@mixin font-smoothing($val: antialiased) {
+  font-smoothing: $val;
+}
+
+@mixin selection {
+  & ::selection {
+    @content;
+  }
+}
+@mixin sel {
+  @include selection;
+}
+
+@mixin gpu {
+  transform: translate3d(0, 0, 0);
+}
+
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    @content;
+  }
+}
+
+@mixin scrollbar-track {
+  &::-webkit-scrollbar-track {
+    @content;
+  }
+}
+
+@mixin scrollbar-thumb {
+  &::-webkit-scrollbar-thumb {
+    @content;
+  }
+}
+
+@mixin scrollbar-track-piece {
+  &::-webkit-scrollbar-track-piece {
+    @content;
+  }
+}
+
+//triangle
+@mixin arr($width, $height, $bg, $direction) {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  @if $direction == t {
+    border-width: 0 $width / 2 + px $height + px $width / 2 + px;
+    border-color: transparent transparent $bg transparent;
+  }
+  @if $direction == r {
+    border-width: $height / 2 + px 0 $height / 2 + px $width + px;
+    border-color: transparent transparent transparent $bg;
+  }
+  @if $direction == b {
+    border-width: $height + px $width / 2 + px 0 $width / 2 + px;
+    border-color: $bg transparent transparent transparent;
+  }
+  @if $direction == l {
+    border-width: $height / 2 + px $width + px $height / 2 + px 0;
+    border-color: transparent $bg transparent transparent;
+  }
+  @if $direction == tl {
+    border-width: $height + px $width + px 0 0;
+    border-color: $bg transparent transparent transparent;
+  }
+  @if $direction == tr {
+    border-width: 0 $width + px $height + px 0;
+    border-color: transparent $bg transparent transparent;
+  }
+  @if $direction == br {
+    border-width: 0 0 $height + px $width + px;
+    border-color: transparent transparent $bg transparent;
+  }
+  @if $direction == bl {
+    border-width: $width + px 0 0 $height + px;
+    border-color: transparent transparent transparent $bg;
+  }
+}
+// example
+// +arr(500,50, #000, l)
+// +arr(500,50, #000, bl)
+
+@mixin rotate($var) {
+  transform: rotate($var + deg);
+}
+
+@mixin blur($var) {
+  filter: blur($var);
+}
+@mixin scale($var) {
+  transform: scale($var);
+}
+
+@mixin counter($var, $sep) {
+  counter-reset: list + $var;
+  > li {
+    &:before {
+      content: counter(list + $var) $sep;
+      counter-increment: list + $var;
+    }
+  }
+}
+
+@mixin f($name, $font-size: null, $letter-spacing: null) {
+  $font-family: null;
+  @if $name == "l" {
+    $font-family: "light";
+  }
+  font-family: $font-family;
+  font-weight: normal;
+  @if $font-size != null {
+    font-size: $font-size + px;
+  }
+  @if $letter-spacing != null {
+    letter-spacing: ($letter-spacing / 1000) + em;
+  }
+}
+
+@mixin dark {
+  body.dark {
+    @content;
+  }
+}
+
+@mixin iconFont {
+  font-family: "#{$simple-line-font-family}";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
