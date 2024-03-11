@@ -1,0 +1,120 @@
+:root {
+  --form-control-color: $orange;
+  --form-control-disabled: #959495;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  &-input {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: $wh;
+    font: inherit;
+    color: currentColor;
+    height: 20px;
+    width: 20px;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+    --form-control-color: #FFF;
+    color: #e1e1e1;
+    border-radius: 5px;
+
+    &::before {
+      content: "";
+      width: 0.65em;
+      height: 0.65em;
+      clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+      transform: scale(0);
+      transform-origin: bottom left;
+      transition: 120ms transform ease-in-out;
+      box-shadow: inset 1em 1em var(--form-control-color);
+      /* Windows High Contrast Mode */
+      background-color: CanvasText;
+    }
+
+    &:checked {
+      background-color: $orange;
+      --form-control-color: #FFF;
+
+      color: $orange;
+      &::before {
+        transform: scale(1);
+      }
+    }
+
+    &:disabled {
+      --form-control-color: var(--form-control-disabled);
+
+      color: var(--form-control-disabled);
+      cursor: not-allowed;
+    }
+  }
+
+  label {
+    display: initial;
+    margin-bottom: auto;
+    margin-left: 10px;
+  }
+}
+
+.vam:not(.dropdown):not(.sf2-icon-monitor):not(span) {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: $wh;
+    font: inherit;
+    color: currentColor;
+    height: 20px;
+    width: 20px;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+    --form-control-color: #FFF;
+    color: #e1e1e1;
+    border-radius: 5px;
+
+    &::before {
+      content: "";
+      width: 0.65em;
+      height: 0.65em;
+      clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+      transform: scale(0);
+      transform-origin: bottom left;
+      transition: 120ms transform ease-in-out;
+      box-shadow: inset 1em 1em var(--form-control-color);
+      /* Windows High Contrast Mode */
+      background-color: CanvasText;
+    }
+
+    &:checked {
+      background-color: $orange;
+      --form-control-color: #FFF;
+
+      color: $orange;
+      &::before {
+        transform: scale(1);
+      }
+    }
+
+    &:disabled {
+      --form-control-color: var(--form-control-disabled);
+
+      color: var(--form-control-disabled);
+      cursor: not-allowed;
+    }
+}
+
+.cur-view-content {
+  .col-md-5 {
+    p.ml-4 {
+      margin-left: 2rem !important;
+    }
+  }
+}
