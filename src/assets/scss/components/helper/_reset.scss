@@ -1,0 +1,92 @@
+.side-panel {
+  .side-panel-center,
+  .side-panel-footer,
+  .side-nav-footer {
+    background: transparent;
+    border-bottom: 0;
+    border-right: 0;
+  }
+
+  .ellipsis {
+    white-space: normal;
+    overflow: initial;
+    text-overflow: ellipsis;
+  }
+}
+
+.main-panel-north,
+.side-panel-north {
+  background: transparent;
+  border-bottom: 0;
+}
+
+a,
+button,
+.mark-notifications,
+.notification-footer {
+  text-decoration: none;
+
+  :hover {
+    text-decoration: none;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 24px;
+  line-height: 1.33333;
+}
+
+.go-back {
+  font-size: 1.2rem;
+  left: -20px;
+  position: absolute;
+  top: -1px;
+}
+
+.op-bar {
+  background: transparent;
+}
+
+.form-check {
+  .form-check-label {
+    span {
+      padding-left: 10px;
+      padding-top: 2px;
+    }
+  }
+}
+
+.sys-stat-tool {
+  height: 40px;
+  line-height: 30px;
+}
+
+body {
+  .system-statistic-button {
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .paginator {
+    .btn-primary,
+    .btn-secondary {
+      height: 38px;
+      line-height: 38px;
+    }
+  }
+
+  .statistic-reports-submit {
+    margin-left: 15px;
+    height: 50px;
+    border-radius: 10px;
+    min-width: 135px;
+  }
+
+  .operation-item {
+    min-height: 50px;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
