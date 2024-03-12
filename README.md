@@ -1,3 +1,5 @@
+![Destaque](https://raw.githubusercontent.com/adrianocandrade/seafile-shadow-wave-theme/main/screenshots/destaque.png)
+
 # SeaFile Shadow Wave Theme
 
 > Seafile “Shadow Wave” Theme: An elegant combination of light and shadow for your Seafile! This custom theme offers a pleasant visual experience whether you are a day or night user. 🥰
