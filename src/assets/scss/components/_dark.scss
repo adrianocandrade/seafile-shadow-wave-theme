@@ -671,8 +671,10 @@ body {
   }
 }
 
-#log-in-panel {
+#log-in-panel,
+.rename-container {
   .input,
+  input,
   textarea {
     color: $wh;
     background: rgba($border-dark, 0.04);
