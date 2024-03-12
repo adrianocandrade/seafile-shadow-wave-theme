@@ -22,14 +22,8 @@
 
 ## 💎 URL Themes
 
-- White URL
-```sh
-    https://github.com/adrianocandrade/seafile-shadow-wave-theme/blob/92aa063a6006611f3db6ab7d83dfb6c37ebd80e4/dist/assets/css/custom.css
-```
-- Dark URL
-```sh
-    https://github.com/adrianocandrade/seafile-shadow-wave-theme/blob/92aa063a6006611f3db6ab7d83dfb6c37ebd80e4/dist/assets/css/customDark.css
-```
+- [Copy CSS Theme light](https://github.com/adrianocandrade/seafile-shadow-wave-theme/blob/main/dist/assets/css/custom.css)
+- [Copy CSS Theme Dark](https://github.com/adrianocandrade/seafile-shadow-wave-theme/blob/main/dist/assets/css/customDark.css)
 
 ## 🔥 Configure your Seafile
 
