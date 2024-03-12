@@ -1,4 +1,4 @@
-![Destaque](https://raw.githubusercontent.com/adrianocandrade/seafile-shadow-wave-theme/main/screenshots/destaque.png)
+![Destaque](https://raw.githubusercontent.com/adrianocandrade/seafile-shadow-wave-theme/main/screenshots/print-1.png)
 
 # SeaFile Shadow Wave Theme
 
