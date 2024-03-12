@@ -10,6 +10,16 @@
 
 ---
 
+## 📃 Custom light/dark theme for almost all pages and elements
+
+- login page
+- mainpage
+- profile
+- admin menu
+- file editor
+- MD editor
+- etc.
+
 ## 💎 URL Themes
 
 - White URL
