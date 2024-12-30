@@ -1,6 +1,6 @@
 {
   "name": "seafile-shadow-wave-theme",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Seafile “Shadow Wave” Theme: An elegant combination of light and shadow for your Seafile! This custom theme offers a pleasant visual experience whether you are a day or night user.",
   "scripts": {
     "dev": "webpack serve --config webpack.config.dev.js",
