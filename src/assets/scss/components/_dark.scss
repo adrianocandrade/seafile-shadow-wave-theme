@@ -497,8 +497,8 @@ body {
 
   .vam:not(.dropdown):not(.sf2-icon-monitor):not(span) {
     --form-control-color: $bl;
-    color: #1b1d21;
-    background-color: #1b1d21;
+    color: $bl;
+    background-color: $bl;
 
     &::before {
       box-shadow: inset 1em 1em var(--form-control-color);
@@ -582,6 +582,27 @@ body {
 .sf-md-viewer-topbar-first,
 .sf-md-viewer-topbar-first-narrow {
   border-bottom: 1px solid rgba($border-dark, 0.04);
+}
+
+.sf-slate-editor-container {
+  .sf-menu-group {
+    border-right: 1px solid rgba($border-dark, 0.04);
+    .sf-menu-group-item {
+      background-color: $bl;
+    }
+  }
+
+  .sf-slate-editor-container .sf-slate-editor-content .article {
+    box-shadow: 0 0 15px $bl;
+  }
+
+}
+
+.sf-slate-editor-container .sf-slate-editor-content .article h1, .sf-slate-editor-container .sf-slate-editor-content .article h2, .sf-slate-editor-container .sf-slate-editor-content .article h3, .sf-slate-editor-container .sf-slate-editor-content .article h4, .sf-slate-editor-container .sf-slate-editor-content .article h5, .sf-slate-editor-container .sf-slate-editor-content .article h6,
+.sf-slate-editor-container .sf-slate-editor-content .article,
+.sf-header-menu .sf-header-toggle,
+.sf-header-menu .sf-header-popover .sf-dropdown-menu-item {
+    color: #b2b3bd;
 }
 
 .sf-slate-editor-container .sf-slate-scroll-container {
@@ -696,4 +717,180 @@ body {
       background: rgba($border-dark, 0.04);
     }
   }
+}
+
+.popover {
+  background-color: $dark-bg;
+  border: 1px solid $dark-bg;
+  -webkit-box-shadow: 0 24px 64px rgba($border-dark, 0.04);
+  box-shadow: 0 24px 64px rgba($border-dark, 0.05);
+  border-radius: 20px;
+}
+
+.list-tag-popover .tag-list-footer {
+  border-top: 1px solid $border-dark;
+}
+
+.add-tag-link:hover {
+  background: #191b21;
+  margin: 0 10px;
+  border-radius: 7px;
+}
+
+span.mx-2 {
+  color: #15161a;
+}
+
+.tag-list-item.h1 {
+  background: transparent
+}
+
+.sf-article-info-container {
+  background-color: $bl;
+}
+
+ul.sf-article-info-nav.nav {
+  background-color: $bl;
+  border-bottom: 1px solid $border-dark;
+}
+
+.sf-markdown-help-wrapper.active {
+  background-color: $bl;
+  border-left: 1px solid $border-dark;
+}
+
+.sf-editor-outline {
+  border-left: 1px solid #ddd;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-bg: #242731;
+        --dark-bg: #21252b;
+        --light-bg: #333842;
+
+        --main-font: #ababab;
+        --light-font: #eee;
+        --dark-font: #888;
+
+        --main-theme: #6C86B7;
+        --theme-font: #6C86B7;
+
+        --border: rgba(34, 34, 34, 0.9);
+        --shadow: rgba(10, 10, 10, 0.8);
+        --no-shadow: rgba(0, 0, 0, 0);
+        --green: #326732;
+        --info: #676732;
+        --error: #673f32;
+
+        /* Projeto */
+        --color-white: #fff;
+        --color-dark: #242731;
+        --color-purple: #6c5dd3;
+        --color-orange: #ec8000;
+        --color-gray-dark: #808191;
+        --color-gray-light: #b2b3bd;
+        --color-blue: #3f8cff;
+        --color-blue-light: #a0d7e7;
+        --color-green: #7fba7a;
+        --color-red: #ff754c;
+        --color-yellow: #ffce73;
+        --color-black: #11142D;
+        --color-border-dark: rgba(228, 228, 228, 0.1);
+    }
+}
+
+/* Mixin de Sombras */
+@mixin shadow {
+    background: #e3e6ec;
+    opacity: 0.91;
+    filter: blur(86.985px);
+    border-radius: 24px;
+    @include m {
+        filter: blur(46.985px);
+    }
+}
+
+@mixin shadow-dark {
+    background: #000;
+    opacity: 0.51;
+    filter: blur(86.985px);
+    border-radius: 24px;
+    @include m {
+        filter: blur(46.985px);
+    }
+}
+
+/* Temas Escuros */
+body {
+    background: var(--color-dark);
+    color: var(--main-font);
+}
+
+.side-panel {
+    background: var(--dark-bg);
+    border-color: var(--color-border-dark);
+
+    .side-nav {
+        color: var(--color-gray-dark);
+
+        .nav-link {
+            &:hover {
+                color: var(--color-orange);
+            }
+
+            &.active {
+                background: var(--color-orange);
+                color: var(--color-white);
+            }
+        }
+    }
+}
+
+.main-panel {
+    .btn {
+        background: var(--dark-bg);
+        color: var(--light-font);
+
+        &:hover {
+            background: var(--main-theme);
+            color: var(--light-font);
+        }
+    }
+}
+
+.cur-view-container {
+    background: var(--main-bg);
+
+    table {
+        thead th {
+            color: var(--light-font);
+            border-color: var(--border);
+        }
+        tbody td {
+            color: var(--main-font);
+            border-color: var(--border);
+        }
+    }
+}
+
+/* Outras adaptações */
+.grid-item {
+    background: var(--light-bg);
+
+    &:hover {
+        background: var(--main-theme);
+        border-radius: 5px;
+    }
+}
+
+.form-control {
+    background: var(--dark-bg);
+    color: var(--light-font);
+
+    &:focus {
+        border-color: var(--main-theme);
+        box-shadow: 0 0 0 1px var(--main-theme);
+    }
 }
