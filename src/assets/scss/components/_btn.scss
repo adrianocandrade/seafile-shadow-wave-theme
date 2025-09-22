@@ -100,3 +100,19 @@
     }
   }
 }
+
+.view-mode.btn-group {
+  .btn {
+    font-size: 12px;
+    @include iconFont;
+
+  }
+}
+
+.sf2-icon-list-view:before {
+  content: "\e067" !important;
+}
+
+.sf2-icon-grid-view:before {
+  content: "\e06a";
+}

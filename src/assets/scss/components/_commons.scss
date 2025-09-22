@@ -6,10 +6,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $text;
+
   &.dark {
     background: $dark;
     color: $wh;
   }
+
   &.no-scroll {
     overflow: hidden;
   }
@@ -53,7 +55,13 @@ select {
   }
 }
 
+.sf-view-mode-btn.current-mode {
+  background-color: $orange !important;
+  color: $wh !important;
+}
+
 #wrapper {
+
   .top-header,
   #header {
     background: transparent;
